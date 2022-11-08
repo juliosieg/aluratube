@@ -19,6 +19,7 @@ function HomePage() {
                 <StyledTimeline>
                     <Timeline playlists={config.playlists} />
                 </StyledTimeline>
+                <Favorites />
             </div>
         </>
     );
@@ -88,5 +89,68 @@ function Timeline(props) {
                 )
             })}
         </div>
+    )
+}
+
+function Favorites() {
+
+    const StyledFavorites = styled.div`
+
+    padding: 16px;
+
+    section {
+        padding: 16px;
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 1px solid black;
+    }
+    .favorites {
+        display: flex;
+        margin-top: 16px;
+
+    }
+
+    .favorite {
+        align-items: center;
+        display: flex;
+        gap: 8px;
+        flex-direction: column;
+        text-align: center;
+        margin-right: 8px;
+        cursor: pointer;
+    }
+
+    span.title{
+        font-weight: bold;
+        font-size: 16px;
+    }
+`;
+
+    const favorites = config.favorites;
+
+    return (
+        <StyledFavorites>
+            <div>
+                <section>
+                    <span className="title">AluraTubes Favoritos</span>
+                    <div className="favorites">
+                        {favorites.map((favorite) => {
+                            return (
+                                <a href={`https://www.youtube.com/c/${favorite.name}`} target="_blank">
+                                    <div className="favorite">
+                                    <img src={favorite.thumb} />
+                                    <span>@{favorite.name}</span>
+                                    </div>
+                                </a>  
+                            );
+                        })}
+                    </div>
+                </section>
+            </div>
+        </StyledFavorites>
     )
 }

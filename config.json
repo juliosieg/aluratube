@@ -2,6 +2,16 @@
   "name": "Julio Sieg",
   "job": "Developer",
   "github": "juliosieg",
+  "favorites": [
+    {
+        "name": "dudagarbi",
+        "thumb": "https://yt3.ggpht.com/dCKxBQYVEJt6Pyr_IkTX11yEj3RKSgsU7sb-OXLuiYrfD45bhUa-jlnv4nDVB642E3TEm35ucg=s88-c-k-c0x00ffffff-no-rj"
+    },
+    {
+        "name": "avioesemusicas",
+        "thumb": "https://yt3.ggpht.com/9iQyyGoyciDF03vjXJ1eCaAMCn2X1__r1-ucPat7uzZFDRJChBUWwipWq2NbHQjWtGZ0iVq0=s88-c-k-c0x00ffffff-no-rj"
+    }
+  ],
   "playlists": {
       "jogos": [
           {
